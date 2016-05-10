@@ -1,0 +1,3 @@
+# Ignore Directory Dependency
+node_modules
+.DS_Store
