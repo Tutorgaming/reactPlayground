@@ -44,12 +44,12 @@ class QuizAddForm extends React.Component {
   // update on any textbox change
   update(e){
     this.setState({
-      question : ReactDOM.findDOMNode(this.refs.question_ref).value,
-      choice1: ReactDOM.findDOMNode(this.refs.choice1_ref).value,
-      choice2: ReactDOM.findDOMNode(this.refs.choice2_ref).value,
-      choice3: ReactDOM.findDOMNode(this.refs.choice3_ref).value,
-      choice4: ReactDOM.findDOMNode(this.refs.choice4_ref).value,
-      answer: ReactDOM.findDOMNode(this.refs.answer_ref).value
+      question  :  ReactDOM.findDOMNode(this.refs.question_ref).value,
+      choice1   :  ReactDOM.findDOMNode(this.refs.choice1_ref).value,
+      choice2   :  ReactDOM.findDOMNode(this.refs.choice2_ref).value,
+      choice3   :  ReactDOM.findDOMNode(this.refs.choice3_ref).value,
+      choice4   :  ReactDOM.findDOMNode(this.refs.choice4_ref).value,
+      answer    :  ReactDOM.findDOMNode(this.refs.answer_ref).value
     });
 
   }
@@ -57,6 +57,7 @@ class QuizAddForm extends React.Component {
   handleQuestionSubmit(e){
     e.preventDefault();
     //Submitting The Form Goes Here
+    // Calling Props (onAddQuiz From Parent)
     this.props.onAddQuiz(this.state);
     //this.props.onAddQuiz(this.state);
     this.clearQuestion();
@@ -105,9 +106,7 @@ class QuizAddForm extends React.Component {
           <hr/>
           <FormGroup controlId="formControlsText">
               <div className = "row">
-
-
-                  <Col md={4} mdPush={4}>
+                  <Col md={6}>
                       <br/>
                       <center>
                       <Button bsStyle="primary" onClick={this.handleQuestionSubmit.bind(this)}>Submit Question</Button>

@@ -1,28 +1,24 @@
 /*
   Name : React Playground
-  Header Bar Components Goes Here
+  Navigation Bar Components Goes Here
   By : Theppasith N.
 */
 
 import React from "react";
 import { Button, Panel } from 'react-bootstrap';
 // Main App
-class HeaderBar extends React.Component {
+class NavBar extends React.Component {
   // Rendering Method
   render() {
     return (
         <Panel>
-          <div class = "HeaderBar" >
+          <div className = "HeaderBar" >
             <span>
-              <Button bsStyle="primary">Play Now !</Button>
+              <Button bsStyle="primary">Button 1</Button>
             </span>
             &nbsp;&nbsp;&nbsp;
             <span>
-              <Button bsStyle="primary">Quiz Add Form !</Button>
-            </span>
-            &nbsp;&nbsp;&nbsp;
-            <span>
-              <Button bsStyle="primary">Quiz List</Button>
+              <Button bsStyle="primary">Button 2</Button>
             </span>
             &nbsp;&nbsp;&nbsp;
           </div>
@@ -31,4 +27,4 @@ class HeaderBar extends React.Component {
   }
 }
 
-export default HeaderBar;
+export default NavBar;
